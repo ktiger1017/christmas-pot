@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b686023de5.js" crossorigin="anonymous"></script>
+    <style>
+        /*#########눈내리는 효과########*/
+
+
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial;
+            text-shadow: 0 0 1px #000;
+        }
+
+
+        @-webkit-keyframes snowflakes-fall {
+            0% {
+                top: -10%
+            }
+
+            100% {
+                top: 100%
+            }
+        }
+
+        @-webkit-keyframes snowflakes-shake {
+            0% {
+                -webkit-transform: translateX(0px);
+                transform: translateX(0px)
+            }
+
+            50% {
+                -webkit-transform: translateX(80px);
+                transform: translateX(80px)
+            }
+
+            100% {
+                -webkit-transform: translateX(0px);
+                transform: translateX(0px)
+            }
+        }
+
+        @keyframes snowflakes-fall {
+            0% {
+                top: -10%
+            }
+
+            100% {
+                top: 100%
+            }
+        }
+
+        @keyframes snowflakes-shake {
+            0% {
+                transform: translateX(0px)
+            }
+
+            50% {
+                transform: translateX(80px)
+            }
+
+            100% {
+                transform: translateX(0px)
+            }
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
+            -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+            -webkit-animation-duration: 10s, 3s;
+            -webkit-animation-timing-function: linear, ease-in-out;
+            -webkit-animation-iteration-count: infinite, infinite;
+            -webkit-animation-play-state: running, running;
+            animation-name: snowflakes-fall, snowflakes-shake;
+            animation-duration: 10s, 3s;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            animation-play-state: running, running
+        }
+
+        .snowflake:nth-of-type(0) {
+            left: 1%;
+            -webkit-animation-delay: 0s, 0s;
+            animation-delay: 0s, 0s
+        }
+
+        .snowflake:nth-of-type(1) {
+            left: 10%;
+            -webkit-animation-delay: 1s, 1s;
+            animation-delay: 1s, 1s
+        }
+
+        .snowflake:nth-of-type(2) {
+            left: 20%;
+            -webkit-animation-delay: 6s, .5s;
+            animation-delay: 6s, .5s
+        }
+
+        .snowflake:nth-of-type(3) {
+            left: 30%;
+            -webkit-animation-delay: 4s, 2s;
+            animation-delay: 4s, 2s
+        }
+
+        .snowflake:nth-of-type(4) {
+            left: 40%;
+            -webkit-animation-delay: 2s, 2s;
+            animation-delay: 2s, 2s
+        }
+
+        .snowflake:nth-of-type(5) {
+            left: 50%;
+            -webkit-animation-delay: 8s, 3s;
+            animation-delay: 8s, 3s
+        }
+
+        .snowflake:nth-of-type(6) {
+            left: 60%;
+            -webkit-animation-delay: 6s, 2s;
+            animation-delay: 6s, 2s
+        }
+
+        .snowflake:nth-of-type(7) {
+            left: 70%;
+            -webkit-animation-delay: 2.5s, 1s;
+            animation-delay: 2.5s, 1s
+        }
+
+        .snowflake:nth-of-type(8) {
+            left: 80%;
+            -webkit-animation-delay: 1s, 0s;
+            animation-delay: 1s, 0s
+        }
+
+        .snowflake:nth-of-type(9) {
+            left: 90%;
+            -webkit-animation-delay: 3s, 1.5s;
+            animation-delay: 3s, 1.5s
+        }
+
+        /*#########눈내리는 효과########*/
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        #wrap .page {
+            width: 100%;
+
+        }
+
+        /*#####TOP#####*/
+        #head {
+            width: 100%;
+            height: 65px;
+            background-color: white;
+            /*            position: fixed;*/
+            display: flex;
+            z-index: 10;
+            z-index: 10;
+        }
+    
+        #head img {
+            margin-left: 8%;
+            margin-top: 7px;
+            font-size: 150px;
+            height: 50px;
+            float: left;
+            border-radius: 50%;
+        }
+
+        .fa-bars:before,
+        .fa-navicon:before {
+            content: "\f0c9";
+            cursor: pointer;
+        }
+        .top{
+            cursor: pointer;
+        }
+        /*#####TOP 끝#####*/
+        /*#####1페이지#####*/
+        #submenu {
+            width: 100%;
+            height: 230px;
+            font-family: "Cafe24Shiningstar";
+            font-size: 30px;
+            display: flex;
+            font-weight: inherit;
+            color: white;
+            background-image: url(backback.png);
+            background-color: #25323a;
+            position: absolute;
+            top: 60px;
+            z-index: 10;
+
+        }
+
+        #sub1 {
+            position: absolute;
+            top: 25%;
+            margin-left: 20%;
+        }
+
+        #sub2 {
+            position: absolute;
+            top: 25%;
+            margin-left: 43%;
+        }
+
+        #sub3 {
+            position: absolute;
+            top: 25%;
+            margin-left: 59%;
+        }
+
+        #sub4 {
+            position: absolute;
+            top: 25%;
+            margin-left: 80%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #head i {
+            font-size: 35px;
+            color: cornflowerblue;
+
+        }
+
+        #head span {
+            float: right;
+            font-weight: 550;
+            margin-top: 20px;
+            color: darkgray;
+            font-family: "Cafe24Shiningstar";
+            font-size: 30px;
+        }
+
+        #page1top {
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            color: antiquewhite;
+            font-family: "Cafe24Shiningstar";
+            font-size: 45px;
+        }
+
+        /*#####1페이지 끝#####*/
+
+        /*#####2페이지#####*/
+        #page2 {
+            width: 100%;
+            height: 100%;
+            background-image: url(back2.jpg);
+            background-size: cover;
+            position: relative;
+        }
+
+        #page2 .snow {
+            position: absolute;
+            width: 400px;
+            height: 300px;
+
+        }
+
+
+        .tx1 {
+            left: 35%;
+            top: 50px;
+            position: absolute;
+            font-size: 150px;
+            font-family: "Cafe24Shiningstar";
+            color: darkturquoise;
+        }
+
+        .tx2 {
+            left: 35%;
+            top: 160px;
+            position: absolute;
+            font-size: 80px;
+            font-family: "Cafe24Shiningstar";
+            color: red;
+        }
+
+        .tx3 {
+            left: 35%;
+            top: 210px;
+            position: absolute;
+            font-size: 150px;
+            font-family: "Cafe24Shiningstar";
+            color: green;
+        }
+
+        .tx4 {
+            left: 35%;
+            top: 400px;
+            position: absolute;
+            font-size: 50px;
+            font-family: "Cafe24Shiningstar";
+            color: antiquewhite;
+        }
+
+        .tx5 {
+            left: 35%;
+            top: 650px;
+            position: absolute;
+            font-size: 40px;
+            font-family: "Cafe24Shiningstar";
+            color: antiquewhite;
+        }
+
+        .tx6 {
+            left: 35%;
+            top: 750px;
+            position: absolute;
+            font-size: 40px;
+            font-family: "Cafe24Shiningstar";
+            color: antiquewhite;
+        }
+
+        .tx7 {
+            left: 35%;
+            top: 850px;
+            position: absolute;
+            font-size: 40px;
+            font-family: "Cafe24Shiningstar";
+            color: antiquewhite;
+        }
+
+        #banner {
+            top: 520px;
+            margin-left: 60%;
+            width: 400px;
+            height: 440px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #movebox {
+            width: 2000px;
+            height: 440px;
+            position: absolute;
+            display: flex;
+        }
+
+        #movebox .tree {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*#####2페이지끝#####*/
+
+        /*#####3페이지 시작#####*/
+        /*#####3페이지 끝#####*/
+        @media (min-width:300px) {
+            .top {
+                display: none;
+            }
+
+            #head i {
+                display: block;
+            }
+
+            #banner {
+                display: none;
+            }
+
+            #page3top {
+                display: none;
+            }
+
+            #page4top {
+                display: none;
+            }
+
+            #page5top {
+                display: none;
+            }
+
+        }
+
+        @media (min-width:1500px) {
+            #banner {
+                display: none;
+            }
+        }
+
+        @media (min-width:1650px) {
+            #banner {
+                display: block;
+            }
+        }
+
+        @media (min-width:700px) {
+            .top {
+                display: none;
+            }
+
+            #head i {
+                display: block;
+            }
+
+            #page3top {
+                display: none;
+            }
+
+            #page4top {
+                display: none;
+            }
+
+            #page5top {
+                display: none;
+            }
+
+        }
+
+        @media (min-width:1000px) {
+            .top {
+                display: block;
+            }
+
+            #head i {
+                display: none;
+            }
+
+            #page3top {
+                display: block;
+            }
+
+            #page4top {
+                display: block;
+            }
+
+            #page5top {
+                display: block;
+            }
+        }
+
+        @font-face {
+            font-family: 'Cafe24Shiningstar';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- #######눈내리는 효과######  -->
+
+    <div class="snowflakes" aria-hidden="true">
+
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+    </div>
+
+    <!-- #######눈내리는 효과######  -->
+    <div id="wrap">
+        <!--     #####1페이지 시작#####-->
+        <div id="top">
+            <div id="head">
+
+                <img src="logo.JPG" style="cursor: pointer">
+
+                <span style="font-family: Cafe24Shiningstar;font-style: italic;font-weight: bolder;font-size: 25px;color: crimson; margin: 15px;cursor: pointer">HAPPY CHRISTMAS</span>
+                <i class="fa-solid fa-bars" style="padding:15px 60%"></i>
+                <span style="margin-left: 20%" class="top">TREE</span>
+                <span style="margin-left: 7%" class="top">PRESENT</span>
+                <span style="margin-left: 7%" class="top">DEAR</span>
+                <span style="margin-left: 7%" class="top">SANTA</span>
+
+            </div>
+
+            <div id="submenu">
+                <ul id="sub1" class="list">
+                    <li>트리 제작하기</li>
+                    <li>주문 제작</li>
+                    <li>트리 장식품</li>
+                </ul>
+
+                <ul id="sub2" class="list">
+                    <li>포장하기</li>
+                    <li>케이크</li>
+                    <li>선물하기</li>
+                </ul>
+
+                <ul id="sub3" class="list">
+                    <li>루돌프 분양</li>
+                    <li>루돌프 보기</li>
+                    <li>루돌프 장식품</li>
+                </ul>
+
+                <ul id="sub4" class="list">
+                    <li>산타 장식품</li>
+                    <li>산타 부르기</li>
+                    <li>후기</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="page" style="width: 100%">
+
+            <video autoplay muted loop class="myVideo">
+                <source src="52.mp4" type="video/mp4" style="width: 100%;">
+            </video>
+
+            <h1 id="page1top">HAPPY CHRISTMAS와 함께 따뜻한 크리스마스를 보내보세요!</h1>
+
+
+        </div>
+        <!--     #####1페이지 끝#####-->
+
+        <!--     #####2페이지 시작#####-->
+        <div class="page" id="page2">
+
+            <span class="tx1"><b>P</b>ICK</span><br>
+            <span class="tx2">YOUR</span><br>
+            <span class="tx3"><b>T</b>REE</span>
+            <span class="tx4">나만의 트리를 만들고 사람들과 공유해보세요!</span>
+            <span class="tx5">원하는 <font color="lightgreen"><b>트리</b></font>를 선택하고</span>
+            <span class="tx6">꾸미고 싶은 <font color="yellow"><b>장식품</b></font>을 선택해서</span>
+            <span class="tx7">소중한 사람들과 <font color="red"><b>추억</b></font>을 만들어보세요</span>
+            <span></span>
+            <img src="snow3.png" class="snow" style="left: 0; opacity: 0.9;">
+            <img src="snow4.png" class="snow" style="right: 0px; opacity:0.7 ">
+            <div id="banner">
+                <div id="movebox">
+                    <img src="tree11.png" class="tree">
+                    <img src="tree22.png" class="tree">
+                    <img src="tree33.png" class="tree">
+                    <img src="tree44.png" class="tree">
+                    <img src="tree55.png" class="tree">
+                </div>
+            </div>
+        </div>
+        <!--     #####2페이지 끝#####-->
+
+        <!--     #####3페이지 시작#####-->
+        <div class="page" style="position: relative" id="page3">
+            <video autoplay muted loop style="width: 100%;">
+                <source src="present.mp4" type="video/mp4">
+            </video>
+
+            <h1 style="position: absolute;left: 21%;top: 5%;font-size: 100px;color: white;font-family: Cafe24Shiningstar;" id="page3top">소중한 사람에게 <font color="red">선물</font>로 마음을 전달해보세요</h1>
+
+        </div>
+
+        <!--     #####3페이지 끝#####-->
+
+        <!--     #####4페이지 시작#####-->
+        <div class="page" style="position: relative;width: 100%;" id="page4">
+            <video autoplay muted loop style="width: 100%;">
+                <source src="dear.mp4" type="video/mp4">
+            </video>
+
+            <h1 style="position: absolute;left: 21%;top: 5%;font-size: 100px;color: white;font-family: Cafe24Shiningstar;" id="page4top">
+                <font color="brown">루돌프</font>로 원하는 곳 어디든지 선물을 전달해보세요
+            </h1>
+        </div>
+        <!--     #####4페이지 끝#####-->
+
+        <!--     #####5페이지 시작#####-->
+        <div class="page" style="position: relative;width: 100%;" id="page5">
+            <video autoplay muted loop style="width: 100%;">
+                <source src="santa.mp4" type="video/mp4">
+            </video>
+
+            <h1 style="position: absolute;left: 21%;top: 5%;font-size: 100px;color: white;font-family: Cafe24Shiningstar;" id="page5top">
+                <font color="yellow"> 산타</font>를 배정해서 선물을 전달해보세요
+            </h1>
+        </div>
+        <!--     #####5페이지 끝#####-->
+
+
+
+        <!--     #####스크립트 시작#####-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script>
+            //            #####page1top 부분 스크롤 내릴때마다 투명도 낮아지게#####
+            $(function() {
+                var i = 250;
+                $("#submenu").css("display", "none");
+                $(window).scroll(function() {
+
+                    let op = ((i - $(window).scrollTop()) * 0.01 / 2.5);
+                    if (op >= 0) {
+                        $("#page1top").css("opacity", op);
+                    }
+                });
+            });
+
+            //            ##### 메뉴부분 마우스 올리면 서브메뉴 나오게#####
+            
+           
+            $(".top").hover(function() {
+
+                $("#submenu").stop().slideToggle(500);
+            });
+            
+            
+            
+            
+            
+            
+            $("#top").click(function() {
+
+                $("#submenu").stop().slideToggle(500);
+            });
+
+            $(".list li").hover(function() {
+                $(this).css("color", "#dfd2c5");
+                $(this).css("font-weight", "bold");
+            }, function() {
+                $(this).css("color", "white");
+                $(this).css("font-weight", "inherit");
+            });
+
+            //            #######2페이지 트리 베너 이미지#######
+            $(function() {
+                setInterval(
+                    function() {
+
+                        $("#movebox").animate({
+                            left: "-400px"
+                        }, 500, function() {
+                            let img = $("#movebox img").eq(0).detach();
+                            $("#movebox").css("left", "0px");
+                            $("#movebox").append(img);
+                        });
+                    }, 3500);
+            });
+        </script>
+        <!--     #####스크립트 끝#####-->
+    </div>
+
+</body></html>
